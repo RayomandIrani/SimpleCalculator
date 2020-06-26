@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="mainDiv">
+        <h1 style="text-align:center;margin-top:2rem;">Simple Calculator</h1>
+        <div id="calBody" class="container bg-secondary w-25 mt-5 rounded">
+            <div id="firstRow" class="row col-md-12 col-sm-12 p-0 m-0 py-3">
+                <input id="textBox" readonly type="text" class="form-control font-weight-bold text-secondary">
+            </div>
+            <div id="secondRow" class="row m-0 p-0 justify-content-center">
+                <button id="resetButton" onclick=" reset()" class="form-control font-weight-bold col-md-5 col-sm-5" style="background-color:rgb(72, 167, 223);">C</button>
+                <button  id="deleteButton" onclick=" deleteFunc()" class="form-control col-md-5 col-sm-5 ml-1" style="background-color:rgb(72, 167, 223);"><i class="icon-arrow-left"></i></button>
+            </div>
+            <div id="thirdRow" class="row m-0 p-0 justify-content-center mt-2">
+                <button id="Button1" onclick="number('1')" class="form-control col-md-2 col-sm-2">1</button>
+                <button id="Button2" onclick="number('2')" class="form-control col-md-2 col-sm-2 ml-1">2</button>
+                <button id="Button3" onclick="number('3')" class="form-control col-md-2 col-sm-2 ml-1">3</button>
+                <button id="ButtonAdd" onclick="number('+')" class="form-control col-md-2 col-sm-2 ml-1 font-weight-bold bg-warning">+</button>
+            </div>
+            <div id="fourthRow" class="row m-0 p-0 justify-content-center mt-2">
+                <button id="Button4" onclick="number('4')" class="form-control col-md-2 col-sm-2">4</button>
+                <button id="Button5" onclick="number('5')" class="form-control col-md-2 col-sm-2 ml-1">5</button>
+                <button id="Button6" onclick="number('6')" class="form-control col-md-2 col-sm-2 ml-1">6</button>
+                <button id="ButtonSub" onclick="number('-')" class="form-control col-md-2 col-sm-2 ml-1 font-weight-bold bg-warning">-</button>
+            </div>
+            <div id="fifthRow" class="row m-0 p-0 justify-content-center mt-2">
+                <button id="Button7" onclick="number('7')" class="form-control col-md-2 col-sm-2">7</button>
+                <button id="Button8" onclick="number('8')" class="form-control col-md-2 col-sm-2 ml-1">8</button>
+                <button id="Button9" onclick="number('9')" class="form-control col-md-2 col-sm-2 ml-1">9</button>
+                <button id="ButtonMul" onclick="number('*')" class="form-control col-md-2 col-sm-2 ml-1 font-weight-bold bg-warning">*</button>
+            </div>
+            <div id="sixthRow" class="row m-0 p-0 justify-content-center mt-2">
+                <button id="ButtonBracket" onclick="placeBracket()" class="form-control col-md-2 col-sm-2 bg-info font-weight-bold">()</button>
+                <button id="Button0" onclick="number('0')" class="form-control col-md-2 col-sm-2 ml-1">0</button>
+                <button id="ButtonDecimal" onclick="number('.')" class="form-control col-md-2 col-sm-2 ml-1 bg-info font-weight-bold">.</button>
+                <button id="ButtonDivide" onclick="number('/')" class="form-control col-md-2 col-sm-2 ml-1 font-weight-bold bg-warning">/</button>
+            </div>
+            <div id="seventhRow" class="row m-0 p-0 justify-content-center mt-2">
+                <button id="ButtonEquals" onclick="evaluateNum()" class="form-control font-weight-bold mb-3 col-md-6 col-sm-6" style="background-color:rgb(72, 167, 223);">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
